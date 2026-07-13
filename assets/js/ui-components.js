@@ -63,7 +63,7 @@
     const siteIndex = [
       { title: 'Home',            desc: 'Gulf Industrial Group – Engineering Excellence Globally', url: 'index.html',           icon: 'home' },
       { title: 'About Us',        desc: 'Over 65 years of industrial leadership and innovation',   url: 'about.html',           icon: 'corporate_fare' },
-      { title: 'Services',        desc: 'Full spectrum of industrial engineering services',         url: 'services.html',        icon: 'build' },
+      { title: 'Businesses',        desc: 'Full spectrum of industrial engineering businesses',         url: 'businesses.html',        icon: 'build' },
       { title: 'Energy Systems',  desc: 'High-performance energy infrastructure solutions',         url: 'service-detail.html',  icon: 'bolt' },
       { title: 'Contact Us',      desc: 'Reach our global teams for technical support',             url: 'contact.html',         icon: 'mail' },
       { title: 'Request a Quote', desc: 'Get a tailored quote from our engineering team',           url: 'request-a-quote.html', icon: 'request_quote' },
