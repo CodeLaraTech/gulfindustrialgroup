@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gulf Industrial Group | Engineering Excellence Globally</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+
+    <!-- Google Fonts & Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        rel="stylesheet" />
+
+    <!-- Local Bootstrap & Animation CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/aos.css" rel="stylesheet" />
+
+    <!-- Custom Style Sheet -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- UI Components (Preloader · Search · Back-to-Top) -->
+    <link href="assets/css/ui-components.css" rel="stylesheet" />
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+    <!-- ── Preloader ─────────────────────────────────────────── -->
+    <div id="gig-preloader" role="status" aria-label="Loading">
+        <div class="preloader-logo">
+            <div class="preloader-icon">
+                <div class="preloader-ring"></div>
+                <div class="preloader-dot"></div>
+            </div>
+            <div style="text-align:center">
+                <div class="preloader-brand"><span class="preloader-brand-inner">Gulf Industrial Group</span></div>
+                <div class="preloader-tagline">Engineering Excellence Globally</div>
+            </div>
+        </div>
+        <div class="preloader-progress-wrap">
+            <div class="preloader-progress-track">
+                <div class="preloader-progress-bar"></div>
+            </div>
+            <div class="preloader-percent">0%</div>
+        </div>
+    </div>
+
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg glass-nav py-3">
+        <div class="container">
+            <div class="nav-logo d-flex align-items-center" onclick="window.location.href='index.html'"
+                style="cursor: pointer;">
+                <img alt="Gulf Industrial Group Logo" class="nav-logo-img"
+                    src="assets/images/logo.webp" />
+            </div>
+            
+            <!-- Mobile Header Actions -->
+            <div class="d-flex align-items-center gap-2 gap-sm-3 ms-auto me-2 me-sm-3 d-lg-none mobile-header-actions">
+                <button class="nav-icon-btn bg-transparent border-0 text-white p-1" data-search-trigger aria-label="Open search">
+                    <span class="material-symbols-outlined fs-3">search</span>
+                </button>
+            </div>
+            
+            <button class="navbar-toggler border-0 text-white mobile-menu-toggle shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="material-symbols-outlined fs-2">menu</span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+                <!-- Mobile Drawer Header -->
+                <div class="drawer-header d-flex justify-content-between align-items-center d-lg-none mb-4 w-100">
+                    <img alt="Gulf Industrial Group Logo" class="drawer-logo-img" src="assets/images/logo.webp" style="height: 32px;" />
+                    <button class="btn border-0 p-1 drawer-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Close menu">
+                        <span class="material-symbols-outlined fs-2">close</span>
+                    </button>
+                </div>
+                
+                <div class="navbar-nav mx-auto nav-links">
+                    <a class="nav-link nav-item active" href="index.html">Home</a>
+                    <a class="nav-link nav-item" href="about.html">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-caret d-flex align-items-center dropdown-trigger" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                            <span class="material-symbols-outlined dropdown-arrow ms-1">expand_more</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-content shadow border-0">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Energy Systems</a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link nav-item" href="contact.html">Contact Us</a>
+                </div>
+                
+                <!-- Mobile Drawer Request a Quote -->
+                <div class="d-lg-none w-100 mt-4 px-2 mobile-drawer-quote">
+                    <a href="request-a-quote.html" class="btn btn-primary w-100 py-2 text-center d-flex justify-content-center align-items-center gap-2 quote-btn-drawer">
+                        Request a Quote <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Header Actions -->
+                <div class="d-none d-lg-flex align-items-center gap-3 nav-actions">
+                    <button class="nav-icon-btn bg-transparent border-0 text-white" data-search-trigger aria-label="Open search"><span
+                            class="material-symbols-outlined">search</span></button>
+                    <a href="request-a-quote.html" class="btn btn-primary">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Slider -->
+    <header class="hero hero-slider-container">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img alt="Industrial Engineering" class="hero-slide-bg" src="assets/images/hero/hero_industrial.webp" />
+                <div class="hero-gradient"></div>
+                <div class="container hero-content">
+                    <div class="hero-content-wrapper">
+                        <h1 class="font-display-lg hero-title">
+                            Engineering the Future of Industrial Excellence
+                        </h1>
+                        <p class="font-body-lg hero-desc">
+                            Delivering innovative manufacturing, specialty materials, packaging, and industrial
+                            solutions that power businesses across the Middle East, Africa, and global markets.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="services.html" class="btn btn-primary-container btn-large">
+                                Explore Services <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                            <a href="contact.html" class="btn btn-glass btn-large">Contact Our Team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img alt="Next-Gen Energy" class="hero-slide-bg" src="assets/images/hero/hero_energy.webp" />
+                <div class="hero-gradient"></div>
+                <div class="container hero-content">
+                    <div class="hero-content-wrapper">
+                        <h1 class="font-display-lg hero-title">
+                            Pioneering Next-Gen Energy Infrastructure
+                        </h1>
+                        <p class="font-body-lg hero-desc">
+                            Architecting resilient grid integrations and high-efficiency hybrid-solar networks designed
+                            to scale for heavy manufacturing complexes worldwide.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="service-detail.html" class="btn btn-primary-container btn-large">
+                                Energy Systems Solutions <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                            <a href="contact.html" class="btn btn-glass btn-large">Talk to an Expert</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img alt="Smart Logistics" class="hero-slide-bg" src="assets/images/hero/hero_logistics.webp" />
+                <div class="hero-gradient"></div>
+                <div class="container hero-content">
+                    <div class="hero-content-wrapper">
+                        <h1 class="font-display-lg hero-title">
+                            Smart Logistics & Automated Operations
+                        </h1>
+                        <p class="font-body-lg hero-desc">
+                            Streamlining global supply chains through AI-driven automated machinery, real-time edge
+                            diagnostics, and scalable logistics hardware.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="services.html" class="btn btn-primary-container btn-large">
+                                Our Capabilities <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                            <a href="contact.html" class="btn btn-glass btn-large">Partner with GIG</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="hero-slider-indicators">
+            <button class="slider-indicator-dot active" data-slide="0"></button>
+            <button class="slider-indicator-dot" data-slide="1"></button>
+            <button class="slider-indicator-dot" data-slide="2"></button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll-indicator">
+            <span class="material-symbols-outlined hero-scroll-icon">expand_more</span>
+        </div>
+    </header>
+
+    <!-- Company Overview -->
+    <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-lg-6">
+                    <span class="font-label-md d-block mb-2 section-subtitle-tertiary">Since 1957</span>
+                    <h2 class="font-headline-xl mb-4 text-color-primary">A Legacy of Engineering Mastery</h2>
+                    <p class="font-body-lg mb-4 overview-text">
+                        Gulf Industrial Group maintains a consistent entrepreneurial management approach. We know that our success depends on anticipating customers' needs and delivering meaningful and practical solutions and applications everyday.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6">
+                            <div class="legacy-stat">
+                                <div class="font-headline-md stat-val">65+</div>
+                                <div class="font-label-md stat-lbl">Years of Experience</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="legacy-stat">
+                                <div class="font-headline-md stat-val">40+</div>
+                                <div class="font-label-md stat-lbl">Global Markets</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 legacy-image-container">
+                    <div class="aspect-video legacy-img-wrapper overflow-hidden">
+                        <img alt="Legacy Video Mock" class="w-100 h-100 object-fit-cover" loading="lazy"
+                            src="assets/images/home/legacy_mock.webp" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Divisions -->
+    <section id="divisions" class="py-5 bg-surface-low" data-aos="fade-up">
+        <div class="container">
+            <div class="header-center-mb text-center mb-5">
+                <h2 class="font-headline-xl mb-2 text-color-primary">Core Business Divisions</h2>
+                <p class="font-body-md section-header-desc mx-auto" style="max-width: 600px;">
+                    Our long-term strategic focus is growth in Specialty Chemicals, Packaging and Food Flavors — the segments that give us a strong platform for continuing growth.
+                </p>
+            </div>
+            <div class="row g-4">
+                <!-- Manufacturing -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/manufacturing.webp" alt="Manufacturing" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">factory</span>
+                                </div>
+                                <h3 class="division-card-title">Manufacturing</h3>
+                                <p class="division-card-desc">Specialty Chemicals — delivering value-added products through innovation and cost leadership.</p>
+                            </div>
+                            <button class="division-card-btn">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Specialty Materials -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/materials.webp" alt="Specialty Materials" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">science</span>
+                                </div>
+                                <h3 class="division-card-title">Specialty Materials</h3>
+                                <p class="division-card-desc">Packaging solutions engineered for performance, protection, and sustainability.</p>
+                            </div>
+                            <button class="division-card-btn">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Industrial Solutions -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/solutions.webp" alt="Industrial Solutions" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">settings_input_component</span>
+                                </div>
+                                <h3 class="division-card-title">Industrial Solutions</h3>
+                                <p class="division-card-desc">Food Flavors — anticipating market trends and delivering practical, customer-focused applications.</p>
+                            </div>
+                            <button class="division-card-btn">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Global Logistics -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/logistics.webp" alt="Global Logistics" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">public</span>
+                                </div>
+                                <h3 class="division-card-title">Global Logistics</h3>
+                                <p class="division-card-desc">Global supply chain expansion — benefiting from open borders to reach new territories worldwide.</p>
+                            </div>
+                            <button class="division-card-btn">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Energy Systems -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/energy.webp" alt="Energy Systems" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">bolt</span>
+                                </div>
+                                <h3 class="division-card-title">Energy Systems</h3>
+                                <p class="division-card-desc">Technology Centre — investing at the leading edge of technology to maintain market leadership.</p>
+                            </div>
+                            <button class="division-card-btn">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Infrastructure -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/infrastructure.webp" alt="Infrastructure" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">domain</span>
+                                </div>
+                                <h3 class="division-card-title">Infrastructure</h3>
+                                <p class="division-card-desc">Green field start-ups in newly developed territories — driving organic and quantum growth.</p>
+                            </div>
+                            <button class="division-card-btn">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- More Services CTA -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-primary btn-lg px-5 py-3 more-services-btn">
+                    More Services <span class="material-symbols-outlined align-middle ms-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation & R&D -->
+    <section id="innovation" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-lg-6 order-2 order-lg-1 legacy-image-container">
+                    <div class="aspect-video legacy-img-wrapper overflow-hidden">
+                        <img alt="Advanced R&D Laboratory" class="w-100 h-100 object-fit-cover" loading="lazy"
+                            src="assets/images/home/research_lab.webp" />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 order-1 order-lg-2">
+                    <h2 class="font-headline-xl mb-4 text-color-primary">Technology Centre & Innovation</h2>
+                    <p class="font-body-lg mb-4 text-color-on-surface-variant">
+                        We are in the process of establishing a Technology Centre to keep us at the leading edge of technology in all our business segments. As technology evolves, we continue to invest in product innovation through R&D to maintain market leadership in value-added products.
+                    </p>
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="material-symbols-outlined checklist-icon">check_circle</span>
+                            <div>
+                                <span class="font-body-md checklist-title d-block mb-1">Nano-Composite Research</span>
+                                <span class="font-body-md text-color-on-surface-variant">Continuing to invest in R&D for value-added product innovation and maintaining market leadership.</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="material-symbols-outlined checklist-icon">check_circle</span>
+                            <div>
+                                <span class="font-body-md checklist-title d-block mb-1">Automated AI Diagnostics</span>
+                                <span class="font-body-md text-color-on-surface-variant">Using the latest information technology to manage supply chain and make far-away customers seem close.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary">Learn More About Innovation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability & ESG -->
+    <section id="sustainability" class="py-5 sustainability-section animate-box" data-aos="fade-up">
+        <div class="sustainability-bg-illustration">
+            <img alt="Sustainable Tech" loading="lazy"
+                src="assets/images/home/sustainability.webp" />
+        </div>
+        <div class="container position-relative z-3">
+            <div class="w-max-640">
+                <span class="font-label-md d-block mb-2 sustainability-subtitle">Our Commitment</span>
+                <h2 class="font-headline-xl mb-4 text-white">Accelerating the Green Transition</h2>
+                <p class="font-body-lg mb-4 text-color-outline-variant">
+                    We focus on the fundamentals of our various businesses with sustainability in mind by keeping "Our Purpose" front and center: "To be true to our core as custodians of wealth and careers and to be valued always as best in class."
+                </p>
+                <div class="d-flex flex-wrap gap-4">
+                    <div class="d-flex flex-column">
+                        <span class="font-display-lg sustainability-stat-val">40%</span>
+                        <span class="font-label-md text-color-outline-variant">Carbon Reduction by 2030</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <span class="font-display-lg sustainability-stat-val">Zero</span>
+                        <span class="font-label-md text-color-outline-variant">Waste-to-Landfill Goal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence Visualization -->
+    <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="header-center-mb text-center mb-5">
+                <h2 class="font-headline-xl mb-2 text-color-primary">Strategic Global Footprint</h2>
+                <p class="font-body-md section-header-desc mx-auto" style="max-width: 600px;">
+                    Connecting major industrial hubs through a network of offices, factories, and distribution centers.
+                </p>
+            </div>
+            <div class="gig-map-wrapper">
+                <div id="gig-leaflet-map"></div>
+                <!-- Map Legend -->
+                <div class="gig-map-legend">
+                    <div class="gig-legend-item">
+                        <span class="gig-legend-dot gig-dot-hq"></span>
+                        <span>Regional Headquarters</span>
+                    </div>
+                    <div class="gig-legend-item">
+                        <span class="gig-legend-dot gig-dot-hub"></span>
+                        <span>Manufacturing Hubs</span>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Industries Served / Bento Grid -->
+    <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="font-headline-xl mb-4 text-color-primary">Industries Powering Progress</h2>
+            <div class="row g-4">
+                <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="glass-card bento-card p-4 h-100 position-relative overflow-hidden">
+                        <div class="bento-content relative z-index-10">
+                            <h3 class="font-headline-md mb-2 text-color-primary">Aerospace & Defense</h3>
+                            <p class="font-body-md text-color-on-surface-variant w-max-448 mb-0">
+                                Precision engineered components designed to withstand extreme atmospheric environments.
+                            </p>
+                        </div>
+                        <span
+                            class="material-symbols-outlined bento-icon-overlay bento-icon-overlay-large">flight</span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card bento-card-bg-primary p-4 h-100 position-relative overflow-hidden">
+                        <h3 class="font-headline-md mb-2 text-white">Automotive</h3>
+                        <p class="font-body-md text-color-on-primary-container mb-0">
+                            Next-generation advanced alloys powering the electric vehicle revolution.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-card bento-card-bg-tertiary p-4 h-100 position-relative overflow-hidden">
+                        <h3 class="font-headline-md mb-2 text-white">Energy</h3>
+                        <p class="font-body-md text-color-white-opacity mb-0">
+                            Durable infrastructure solutions for traditional oil, gas, and green renewables.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="glass-card bento-card d-flex justify-content-between align-items-center p-4 h-100 position-relative overflow-hidden">
+                        <div class="relative z-index-10">
+                            <h3 class="font-headline-md mb-2 text-color-primary">Construction</h3>
+                            <p class="font-body-md text-color-on-surface-variant mb-0">
+                                Scalable performance materials engineered for mega-infrastructure projects across the
+                                region.
+                            </p>
+                        </div>
+                        <span class="material-symbols-outlined bento-icon-construction">architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-banner text-center py-5 px-4 position-relative overflow-hidden">
+                <div class="cta-circle-overlay"></div>
+                <div class="cta-inner-wrapper position-relative z-3">
+                    <h2 class="font-headline-xl mb-3">Partner with the Global Leader in Industrial Excellence</h2>
+                    <p class="font-body-lg mb-4 text-color-on-primary-container mx-auto" style="max-width: 800px;">
+                        We credit our unwavering resolve to the spirit of "Our Mission Statement" — "To add value in everything we do everyday" — which is the guiding light that drives our decisions and actions.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-outline-white btn-large btn-cta-white">Contact Our HQ</a>
+                        <a href="contact.html" class="btn btn-outline-white btn-large">Request Capability Statement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Insights -->
+    <section class="py-5 bg-surface-low" data-aos="fade-up">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="font-headline-xl mb-2 text-color-primary">Latest Industrial Insights</h2>
+                    <p class="font-body-md text-color-on-surface-variant mb-0">Deep-dives into the trends and
+                        technologies shaping the future of global industry.</p>
+                </div>
+                <button class="btn-text d-none">
+                    View All Articles <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="row g-4">
+                <!-- Article 1 (Featured - Horizontal) -->
+                <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="article-card article-card-featured h-100">
+                        <div class="article-image-box">
+                            <img alt="AI in Manufacturing" class="article-image" loading="lazy"
+                                src="assets/images/articles/article_ai_manufacturing.webp" />
+                            <span class="badge badge-primary article-badge">Innovation</span>
+                        </div>
+                        <div class="article-body">
+                            <h3 class="font-headline-md article-title article-title-custom">The Role of AI in
+                                Sustainable Manufacturing</h3>
+                            <p class="font-body-md article-desc">How predictive diagnostics, advanced machine learning
+                                models, and real-time edge intelligence are reducing energy waste, maximizing machine
+                                uptime, and optimizing thermal efficiency across our global manufacturing plants.</p>
+                            <button class="btn-text">
+                                Read More <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 (Normal - Vertical) -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-card h-100">
+                        <div class="article-image-box">
+                            <img alt="Aerospace Logistics" class="article-image" loading="lazy"
+                                src="assets/images/articles/article_aerospace_logistics.webp" />
+                            <span class="badge badge-tertiary article-badge">Aerospace</span>
+                        </div>
+                        <div class="article-body">
+                            <h3 class="font-headline-md article-title article-title-custom">Future-Proofing Aviation
+                                Supply Chains</h3>
+                            <p class="font-body-md article-desc">Strategic insights into the localization of aerospace
+                                component manufacturing in the Middle East, exploring advanced logistics frameworks and
+                                precision tooling networks.</p>
+                            <button class="btn-text">
+                                Read More <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 (Normal - Vertical) -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-card h-100">
+                        <div class="article-image-box">
+                            <img alt="ESG Goals" class="article-image" loading="lazy"
+                                src="assets/images/articles/article_esg_roadmap.webp" />
+                            <span class="badge badge-secondary article-badge">ESG</span>
+                        </div>
+                        <div class="article-body">
+                            <h3 class="font-headline-md article-title article-title-custom">Achieving Net Zero: A
+                                20-Year Roadmap</h3>
+                            <p class="font-body-md article-desc">A comprehensive look at our commitment to carbon
+                                neutrality, focusing on waste reduction, renewable energy adoption, and the
+                                technological milestones ahead.</p>
+                            <button class="btn-text">
+                                Read More <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 (Normal - Vertical) -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="article-card h-100">
+                        <div class="article-image-box">
+                            <img alt="Automation & IoT" class="article-image" loading="lazy"
+                                src="assets/images/articles/article_factory_automation.webp" />
+                            <span class="badge badge-primary article-badge">Automation</span>
+                        </div>
+                        <div class="article-body">
+                            <h3 class="font-headline-md article-title article-title-custom">Smart Factory Automation &
+                                IoT</h3>
+                            <p class="font-body-md article-desc">Implementing cyber-physical systems, smart IoT sensors,
+                                and real-time edge computing to create highly responsive, automated manufacturing lines
+                                for modern industries.</p>
+                            <button class="btn-text">
+                                Read More <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 (Normal - Vertical) -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="article-card h-100">
+                        <div class="article-image-box">
+                            <img alt="Advanced Materials" class="article-image" loading="lazy"
+                                src="assets/images/articles/article_advanced_composites.webp" />
+                            <span class="badge badge-tertiary article-badge">Materials</span>
+                        </div>
+                        <div class="article-body">
+                            <h3 class="font-headline-md article-title article-title-custom">Advanced Composites in Heavy
+                                Industry</h3>
+                            <p class="font-body-md article-desc">Exploring the next generation of polymers, advanced
+                                alloys, and composite materials engineered to withstand high-pressure,
+                                extreme-temperature environments in heavy sector operations.</p>
+                            <button class="btn-text">
+                                Read More <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="header-center-mb text-center mb-5">
+                <h2 class="font-headline-xl mb-2 text-color-primary">Trusted by Industry Leaders</h2>
+                <p class="font-body-md text-color-on-surface-variant mb-0">Strategic partnerships built on decades of
+                    reliability and engineering excellence.</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="testimonial-card">
+                            <div class="material-symbols-outlined testimonial-quote-icon">format_quote</div>
+                            <p class="font-body-lg testimonial-text">
+                                "GIG's precision in aerospace components has redefined our regional supply chain
+                                reliability. Their commitment to zero-defect manufacturing is unparalleled."
+                            </p>
+                            <div class="testimonial-author-area">
+                                <div class="testimonial-avatar">
+                                    <img alt="Marcus Vane" src="assets/images/avatars/avatar_marcus.webp" loading="lazy" />
+                                </div>
+                                <div>
+                                    <p class="testimonial-author-name">Marcus Vane</p>
+                                    <p class="testimonial-author-title">CTO, Vertex Aero-Systems</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 (Default Active / Highlighted) -->
+                    <div class="carousel-slide">
+                        <div class="testimonial-card default-active active">
+                            <div class="material-symbols-outlined testimonial-quote-icon">format_quote</div>
+                            <p class="font-body-lg testimonial-text">
+                                "As we transition to sustainable logistics, GIG's R&D division has been instrumental in
+                                developing lightweight, high-strength composites that reduce our fuel consumption
+                                significantly."
+                            </p>
+                            <div class="testimonial-author-area">
+                                <div class="testimonial-avatar">
+                                    <img alt="Elena Rodriguez" src="assets/images/avatars/avatar_elena.webp" loading="lazy" />
+                                </div>
+                                <div>
+                                    <p class="testimonial-author-name">Elena Rodriguez</p>
+                                    <p class="testimonial-author-title">Director of Sustainability, Global Port Hubs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="testimonial-card">
+                            <div class="material-symbols-outlined testimonial-quote-icon">format_quote</div>
+                            <p class="font-body-lg testimonial-text">
+                                "The scalability of GIG's industrial solutions allowed us to double our production
+                                capacity
+                                in 18 months. They are more than a supplier; they are a strategic growth partner."
+                            </p>
+                            <div class="testimonial-author-area">
+                                <div class="testimonial-avatar">
+                                    <img alt="Ahmed Al-Sayed" src="assets/images/avatars/avatar_ahmed.webp" loading="lazy" />
+                                </div>
+                                <div>
+                                    <p class="testimonial-author-name">Ahmed Al-Sayed</p>
+                                    <p class="testimonial-author-title">VP of Operations, Horizon Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="slider-dot"></span>
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Alliances Section (Infinite Logo Marquee) -->
+    <section class="py-md partners-wrapper">
+        <div class="partners-marquee-container">
+            <div class="partners-marquee-track">
+                <!-- Original Set -->
+                <span class="partner-logo">AEROTECH</span>
+                <span class="partner-logo">GLOBAL-X</span>
+                <span class="partner-logo">VERTEX</span>
+                <span class="partner-logo">SOLARIS</span>
+                <span class="partner-logo">NANO-CORE</span>
+                <span class="partner-logo">HORIZON</span>
+                <!-- Duplicated Set for Seamless Infinite Scrolling -->
+                <span class="partner-logo">AEROTECH</span>
+                <span class="partner-logo">GLOBAL-X</span>
+                <span class="partner-logo">VERTEX</span>
+                <span class="partner-logo">SOLARIS</span>
+                <span class="partner-logo">NANO-CORE</span>
+                <span class="partner-logo">HORIZON</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="py-5 bg-surface-container" data-aos="fade-up">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12 col-lg-6">
+                    <h2 class="font-headline-xl mb-4 text-color-primary">Get in Touch</h2>
+                    <p class="font-body-lg mb-4 contact-header-text">
+                        Connect with our global network of experts to discuss your industrial requirements and
+                        engineering challenges.
+                    </p>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon-box">
+                                <span class="material-symbols-outlined text-color-primary">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="contact-item-title">Global Headquarters</h4>
+                                <p class="contact-item-text font-body-md text-color-on-surface-variant">GIG Tower, Level
+                                    45, Finance District<br />Dubai, United Arab Emirates</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon-box">
+                                <span class="material-symbols-outlined text-color-primary">call</span>
+                            </div>
+                            <div>
+                                <h4 class="contact-item-title">Global Phone Numbers</h4>
+                                <p class="contact-item-text font-body-md text-color-on-surface-variant">MENA: +971 4 000
+                                    0000<br />Europe/Africa: +44 20 0000 0000</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon-box">
+                                <span class="material-symbols-outlined text-color-primary">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="contact-item-title">Departmental Inquiries</h4>
+                                <p class="contact-item-text font-body-md text-color-on-surface-variant">Engineering:
+                                    solutions@gig.com<br />Sustainability: esg@gig.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-map-placeholder mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1785901247036!2d55.2764516!3d25.2141566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a6d0ab1%3A0x3c7e7b57fa0d99ef!2sDIFC!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 d-flex flex-column">
+                    <div class="form-card p-4 h-100 d-flex flex-column">
+                        <h3 class="font-headline-md mb-4 text-color-primary">Send an Inquiry</h3>
+                        <form class="d-flex flex-column flex-grow-1">
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input class="form-control" placeholder="John Doe" required="" type="text" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Company Name</label>
+                                <input class="form-control" placeholder="Enter company" type="text" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Work Email</label>
+                                <input class="form-control" placeholder="john@company.com" required="" type="email" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Industry Sector</label>
+                                <select class="form-select">
+                                    <option>Aerospace &amp; Defense</option>
+                                    <option>Automotive</option>
+                                    <option>Energy</option>
+                                    <option>Logistics</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 flex-grow-1 d-flex flex-column">
+                                <label class="form-label">Your Message</label>
+                                <textarea class="form-control flex-grow-1"
+                                    placeholder="Tell us about your project requirements..." required=""
+                                    style="resize: none; min-height: 120px;"></textarea>
+                            </div>
+                            <button class="btn btn-primary btn-large w-100" type="submit">
+                                Send Inquiry <span class="material-symbols-outlined glyph-size-sm">send</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-5 footer-top">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img alt="Logo" class="footer-logo-img" loading="lazy"
+                            src="assets/images/logo.webp" />
+                        
+                    </div>
+                    <p class="font-body-md footer-subtitle text-color-on-surface-variant">
+                        To be true to our core as custodians of wealth and careers and to be valued always as best in class.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Quick Links</h4>
+                    <ul class="footer-list list-unstyled ps-0">
+                        <li class="mb-2"><a class="footer-link font-body-md" href="index.html">Home</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="about.html">About Us</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Services</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Services</h4>
+                    <ul class="footer-list list-unstyled ps-0">
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">All Services</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="service-detail.html">Specialty Chemicals</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Packaging</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Food Flavors</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Our Newsletter</h4>
+                    <p class="font-body-md footer-newsletter-text text-color-on-surface-variant mb-3">
+                        To add value in everything we do everyday — stay connected with GIG insights and updates.
+                    </p>
+                    <div class="footer-newsletter-box d-flex gap-2">
+                        <input class="form-control" placeholder="Email Address" type="email" />
+                        <button class="btn btn-primary footer-newsletter-btn px-3">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-3 footer-bottom border-top">
+            <p class="font-body-md footer-bottom-text mb-0 text-color-on-surface-variant">© 2026 Gulf Industrial Group.
+                Engineering Excellence Globally.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and AOS Script Dependencies -->
+    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/aos.js"></script>
+
+    <!-- Leaflet JS Map dependency -->
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Custom Script -->
+    <script defer src="assets/js/main.js"></script>
+    <!-- UI Components Script -->
+    <script defer src="assets/js/ui-components.js"></script>
+    <script defer src="assets/js/map.js"></script>
+
+    <!-- ── Search Modal ──────────────────────────────────────── -->
+    <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-backdrop"></div>
+        <div class="search-modal-box">
+            <div class="search-input-row">
+                <span class="material-symbols-outlined search-icon-lg">search</span>
+                <input id="search-modal-input" type="text" placeholder="Search pages, services…" autocomplete="off" spellcheck="false" />
+                <button class="search-clear-btn" aria-label="Clear search">
+                    <span class="material-symbols-outlined" style="font-size:18px">close</span>
+                </button>
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-quick-section">
+                <div class="search-quick-label">Quick Links</div>
+                <div class="search-quick-links">
+                    <a class="search-chip" href="about.html"><span class="material-symbols-outlined">corporate_fare</span>About Us</a>
+                    <a class="search-chip" href="services.html"><span class="material-symbols-outlined">build</span>Services</a>
+                    <a class="search-chip" href="service-detail.html"><span class="material-symbols-outlined">bolt</span>Energy Systems</a>
+                    <a class="search-chip" href="contact.html"><span class="material-symbols-outlined">mail</span>Contact</a>
+                    <a class="search-chip" href="index.html#divisions"><span class="material-symbols-outlined">category</span>Divisions</a>
+                </div>
+            </div>
+            <div class="search-results" role="listbox"></div>
+            <div class="search-esc-hint">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
+
+    <!-- ── Back to Top ───────────────────────────────────────── -->
+    <button id="back-to-top" aria-label="Back to top">
+        <svg class="btt-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="btt-ring-track" cx="26" cy="26" r="22"/>
+            <circle class="btt-ring-progress" cx="26" cy="26" r="22"/>
+        </svg>
+        <div class="btt-btn-face">
+            <span class="material-symbols-outlined btt-arrow">arrow_upward</span>
+            <span class="btt-text">TO TOP</span>
+        </div>
+    </button>
+
+</body>
+
+</html>
+

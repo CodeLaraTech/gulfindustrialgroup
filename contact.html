@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us | Gulf Industrial Group</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts & Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        rel="stylesheet" />
+
+    <!-- Local Bootstrap & Animation CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/aos.css" rel="stylesheet" />
+
+    <!-- Custom Style Sheet -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- UI Components (Preloader · Search · Back-to-Top) -->
+    <link href="assets/css/ui-components.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ── Preloader ─────────────────────────────────────────── -->
+    <div id="gig-preloader" role="status" aria-label="Loading">
+        <div class="preloader-logo">
+            <div class="preloader-icon">
+                <div class="preloader-ring"></div>
+                <div class="preloader-dot"></div>
+            </div>
+            <div style="text-align:center">
+                <div class="preloader-brand"><span class="preloader-brand-inner">Gulf Industrial Group</span></div>
+                <div class="preloader-tagline">Engineering Excellence Globally</div>
+            </div>
+        </div>
+        <div class="preloader-progress-wrap">
+            <div class="preloader-progress-track">
+                <div class="preloader-progress-bar"></div>
+            </div>
+            <div class="preloader-percent">0%</div>
+        </div>
+    </div>
+
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg glass-nav py-3">
+        <div class="container">
+            <div class="nav-logo d-flex align-items-center" onclick="window.location.href='index.html'"
+                style="cursor: pointer;">
+                <img alt="Gulf Industrial Group Logo" class="nav-logo-img"
+                    src="assets/images/logo.webp" />
+            </div>
+            
+            <!-- Mobile Header Actions -->
+            <div class="d-flex align-items-center gap-2 gap-sm-3 ms-auto me-2 me-sm-3 d-lg-none mobile-header-actions">
+                <button class="nav-icon-btn bg-transparent border-0 text-white p-1" data-search-trigger aria-label="Open search">
+                    <span class="material-symbols-outlined fs-3">search</span>
+                </button>
+            </div>
+            
+            <button class="navbar-toggler border-0 text-white mobile-menu-toggle shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="material-symbols-outlined fs-2">menu</span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+                <!-- Mobile Drawer Header -->
+                <div class="drawer-header d-flex justify-content-between align-items-center d-lg-none mb-4 w-100">
+                    <img alt="Gulf Industrial Group Logo" class="drawer-logo-img" src="assets/images/logo.webp" style="height: 32px;" />
+                    <button class="btn border-0 p-1 drawer-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Close menu">
+                        <span class="material-symbols-outlined fs-2">close</span>
+                    </button>
+                </div>
+                
+                <div class="navbar-nav mx-auto nav-links">
+                    <a class="nav-link nav-item" href="index.html">Home</a>
+                    <a class="nav-link nav-item" href="about.html">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-caret d-flex align-items-center dropdown-trigger" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                            <span class="material-symbols-outlined dropdown-arrow ms-1">expand_more</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-content shadow border-0">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Energy Systems</a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link nav-item active" href="contact.html">Contact Us</a>
+                </div>
+                
+                <!-- Mobile Drawer Request a Quote -->
+                <div class="d-lg-none w-100 mt-4 px-2 mobile-drawer-quote">
+                    <a href="request-a-quote.html" class="btn btn-primary w-100 py-2 text-center d-flex justify-content-center align-items-center gap-2 quote-btn-drawer">
+                        Request a Quote <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Header Actions -->
+                <div class="d-none d-lg-flex align-items-center gap-3 nav-actions">
+                    <button class="nav-icon-btn bg-transparent border-0 text-white" data-search-trigger aria-label="Open search"><span
+                            class="material-symbols-outlined">search</span></button>
+                    <a href="request-a-quote.html" class="btn btn-primary">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <header class="page-hero contact-hero">
+            <div class="page-hero-overlay"></div>
+            <img alt="Industrial Lab Background" class="page-hero-img"
+                src="assets/images/contact/hero_contact.webp" />
+            <div class="page-hero-content">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-active">Contact Us</span>
+                </nav>
+                <h1 class="font-headline-xl text-white mb-6">Global Connectivity, Engineering Support</h1>
+                <p class="font-body-lg text-white opacity-90 leading-relaxed max-w-2xl mx-auto">
+                    We cement long-term relationships by building on our strength of providing systems solutions to our customers. Connect with our global teams to add value in everything we do together.
+                </p>
+            </div>
+        </header>
+
+        <!-- Section 1: Info Suite -->
+        <section class="py-5" id="info-suite" data-aos="fade-up">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Contact Numbers -->
+                    <div class="col-12 col-md-4">
+                        <div class="contact-info-card p-4 h-100 d-flex flex-column align-items-center text-center">
+                            <span class="material-symbols-outlined contact-info-icon mb-3">call</span>
+                            <h3 class="font-headline-md text-color-primary mb-3">Contact Numbers</h3>
+                            <div class="d-flex flex-column gap-2">
+                                <div>
+                                    <p class="font-body-md text-color-primary font-bold mb-1">+971 4 000 0000</p>
+                                    <p class="font-label-md text-color-on-surface-variant mb-0">Primary Global Line</p>
+                                </div>
+                                <div>
+                                    <p class="font-body-md text-color-primary font-bold mb-1">+971 4 000 0001</p>
+                                    <p class="font-label-md text-color-on-surface-variant mb-0">Secondary Global Line
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Global Headquarters -->
+                    <div class="col-12 col-md-4">
+                        <a href="https://maps.google.com/?q=DIFC+Dubai+United+Arab+Emirates" target="_blank" class="text-decoration-none w-100">
+                            <div class="contact-info-card p-4 h-100 d-flex flex-column align-items-center text-center hover:scale-102 transition-transform">
+                                <span class="material-symbols-outlined contact-info-icon mb-3">location_on</span>
+                                <h3 class="font-headline-md text-color-primary mb-3">Global Headquarters</h3>
+                                <p class="font-body-md text-color-on-surface-variant leading-relaxed mb-0">
+                                    GIG Tower, Level 42<br />
+                                    Sheikh Zayed Road, DIFC<br />
+                                    Dubai, United Arab Emirates
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Operating Hours -->
+                    <div class="col-12 col-md-4">
+                        <div class="contact-info-card p-4 h-100 d-flex flex-column align-items-center text-center">
+                            <span class="material-symbols-outlined contact-info-icon mb-3">schedule</span>
+                            <h3 class="font-headline-md text-color-primary mb-3">Operating Hours</h3>
+                            <div class="d-flex flex-column gap-2 w-100">
+                                <div>
+                                    <p class="font-body-md text-color-primary font-bold mb-1">Mon - Fri: 08:00 - 18:00
+                                    </p>
+                                    <p class="font-label-md text-color-on-surface-variant mb-0">Standard Business Hours
+                                    </p>
+                                </div>
+                                <div class="pt-2 border-t border-outline-variant/30 w-100">
+                                    <p class="font-body-md text-color-primary font-bold mb-1">24/7 Technical Support</p>
+                                    <p class="font-label-md text-color-on-surface-variant mb-0">Available for all global
+                                        partners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Contact Form & FAQ -->
+        <section class="py-5 bg-surface-low" id="contact-suite" data-aos="fade-up">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+                    <!-- Left Column: Submit Inquiry Form (White Card) -->
+                    <div class="col-12 col-lg-6">
+                        <div class="mb-4">
+                            <h2 class="font-headline-lg text-color-primary mb-2">Send an Inquiry</h2>
+                            <p class="font-body-md text-color-on-surface-variant mb-0">Fill out the form below, and our teams will get back to you shortly.</p>
+                        </div>
+                        <div class="form-card p-4 p-md-5 rounded-4 position-relative">
+                            <span class="material-symbols-outlined contact-form-bg-icon" style="opacity: 0.15;">contact_mail</span>
+                            <form class="d-flex flex-column gap-3 position-relative z-3">
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label">Full Name</label>
+                                        <input class="form-control" placeholder="John Doe" required="" type="text" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label">Email Address</label>
+                                        <input class="form-control" placeholder="john@company.com" required=""
+                                            type="email" />
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label">Company</label>
+                                        <input class="form-control" placeholder="Industrial Solutions Ltd" required=""
+                                            type="text" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label">Industry</label>
+                                        <select class="form-select" required="">
+                                            <option value="" disabled="" selected="">Select industry</option>
+                                            <option>Aerospace</option>
+                                            <option>Automotive</option>
+                                            <option>Infrastructure</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Your Message</label>
+                                    <textarea class="form-control" placeholder="Describe your inquiry..." required=""
+                                        rows="4"></textarea>
+                                </div>
+                                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                                    <input class="form-check-input mt-0" required="" type="checkbox" id="termsAgree" />
+                                    <label class="form-check-label font-body-md text-color-on-surface-variant"
+                                        for="termsAgree">
+                                        I agree to the <a class="text-color-primary font-bold text-decoration-none"
+                                            href="#">Privacy Policy</a> and data processing terms.
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary btn-large w-100" type="submit">
+                                    Submit Inquiry <span class="material-symbols-outlined glyph-size-sm">send</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Frequently Asked Questions -->
+                    <div class="col-12 col-lg-6">
+                        <div class="mb-4">
+                            <h2 class="font-headline-lg text-color-primary mb-2">Frequently Asked Questions</h2>
+                            <p class="font-body-md text-color-on-surface-variant mb-0">Quick answers to common inquiries about our global services and support.</p>
+                        </div>
+                        <div class="d-flex flex-column gap-3">
+                            <!-- Q1 -->
+                            <details class="faq-details">
+                                <summary class="faq-summary">
+                                    What is the typical response time for support?
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="faq-content">
+                                    Our technical support teams aim to respond to all inquiries within 12 business hours. Priority support agreements feature a guaranteed 2-hour response time.
+                                </div>
+                            </details>
+                            <!-- Q2 -->
+                            <details class="faq-details">
+                                <summary class="faq-summary">
+                                    How do I apply for a partnership?
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="faq-content">
+                                    Please use the "Partnership" option in our contact form dropdown. Our business development team will review your proposal and schedule an initial discovery call.
+                                </div>
+                            </details>
+                            <!-- Q3 -->
+                            <details class="faq-details">
+                                <summary class="faq-summary">
+                                    Do you provide international shipping and logistics?
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="faq-content">
+                                    Yes, Gulf Industrial Group handles end-to-end global supply chain operations and custom clearance across five continents from our major regional hubs in the Middle East, Europe, and Americas.
+                                </div>
+                            </details>
+                            <!-- Q4 -->
+                            <details class="faq-details">
+                                <summary class="faq-summary">
+                                    Can GIG manufacture custom specifications?
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="faq-content">
+                                    Absolutely. Our precision manufacturing and R&D facilities are fully equipped to prototype and execute bespoke mechanical and composite components based on client CAD designs and compliance certifications.
+                                </div>
+                            </details>
+                            <!-- Q5 -->
+                            <details class="faq-details">
+                                <summary class="faq-summary">
+                                    What industries does Gulf Industrial Group serve?
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="faq-content">
+                                    We specialize in serving high-performance sectors including Aerospace & Defense, Automotive components, Renewable Energy Infrastructure, Smart Logistics automation, and large-scale Construction.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Dubai Google Map Embed -->
+        <section class="contact-map-section position-relative overflow-hidden" style="height: 450px; min-height: 450px; padding: 0 !important;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1785901247036!2d55.2764516!3d25.2141566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a6d0ab1%3A0x3c7e7b57fa0d99ef!2sDIFC!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae" 
+                width="100%" 
+                height="100%" 
+                style="border:0; display: block;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-5 footer-top">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img alt="Logo" class="footer-logo-img" loading="lazy"
+                            src="assets/images/logo.webp" />
+                        
+                    </div>
+                    <p class="font-body-md footer-subtitle text-color-on-surface-variant">
+                        To be true to our core as custodians of wealth and careers and to be valued always as best in class.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Quick Links</h4>
+                    <ul class="footer-list list-unstyled ps-0">
+                        <li class="mb-2"><a class="footer-link font-body-md" href="index.html">Home</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="about.html">About Us</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Services</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Services</h4>
+                    <ul class="footer-list list-unstyled ps-0">
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">All Services</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="service-detail.html">Specialty Chemicals</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Packaging</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Food Flavors</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Our Newsletter</h4>
+                    <p class="font-body-md footer-newsletter-text text-color-on-surface-variant mb-3">
+                        To add value in everything we do everyday — stay connected with GIG insights and updates.
+                    </p>
+                    <div class="footer-newsletter-box d-flex gap-2">
+                        <input class="form-control" placeholder="Email Address" type="email" />
+                        <button class="btn btn-primary footer-newsletter-btn px-3">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-3 footer-bottom border-top">
+            <p class="font-body-md footer-bottom-text mb-0 text-color-on-surface-variant">© 2026 Gulf Industrial Group.
+                Engineering Excellence Globally.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and AOS Script Dependencies -->
+    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/aos.js"></script>
+
+    <!-- Custom Script -->
+    <script defer src="assets/js/main.js"></script>
+    <!-- UI Components Script -->
+    <script defer src="assets/js/ui-components.js"></script>
+
+    <!-- ── Search Modal ──────────────────────────────────────── -->
+    <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-backdrop"></div>
+        <div class="search-modal-box">
+            <div class="search-input-row">
+                <span class="material-symbols-outlined search-icon-lg">search</span>
+                <input id="search-modal-input" type="text" placeholder="Search pages, services…" autocomplete="off" spellcheck="false" />
+                <button class="search-clear-btn" aria-label="Clear search">
+                    <span class="material-symbols-outlined" style="font-size:18px">close</span>
+                </button>
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-quick-section">
+                <div class="search-quick-label">Quick Links</div>
+                <div class="search-quick-links">
+                    <a class="search-chip" href="about.html"><span class="material-symbols-outlined">corporate_fare</span>About Us</a>
+                    <a class="search-chip" href="services.html"><span class="material-symbols-outlined">build</span>Services</a>
+                    <a class="search-chip" href="service-detail.html"><span class="material-symbols-outlined">bolt</span>Energy Systems</a>
+                    <a class="search-chip" href="contact.html"><span class="material-symbols-outlined">mail</span>Contact</a>
+                    <a class="search-chip" href="index.html#divisions"><span class="material-symbols-outlined">category</span>Divisions</a>
+                </div>
+            </div>
+            <div class="search-results" role="listbox"></div>
+            <div class="search-esc-hint">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
+
+    <!-- ── Back to Top ───────────────────────────────────────── -->
+    <button id="back-to-top" aria-label="Back to top">
+        <svg class="btt-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="btt-ring-track" cx="26" cy="26" r="22"/>
+            <circle class="btt-ring-progress" cx="26" cy="26" r="22"/>
+        </svg>
+        <div class="btt-btn-face">
+            <span class="material-symbols-outlined btt-arrow">arrow_upward</span>
+            <span class="btt-text">TO TOP</span>
+        </div>
+    </button>
+
+</body>
+
+</html>
+

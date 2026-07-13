@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Services | Gulf Industrial Group</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts & Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+    
+    <!-- Local Bootstrap & Animation CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="assets/css/aos.css" rel="stylesheet"/>
+    
+    <!-- Custom Style Sheet -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/ui-components.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div id="gig-preloader" role="status" aria-label="Loading">
+        <div class="preloader-logo">
+            <div class="preloader-icon"><div class="preloader-ring"></div><div class="preloader-dot"></div></div>
+            <div style="text-align:center">
+                <div class="preloader-brand"><span class="preloader-brand-inner">Gulf Industrial Group</span></div>
+                <div class="preloader-tagline">Engineering Excellence Globally</div>
+            </div>
+        </div>
+        <div class="preloader-progress-wrap">
+            <div class="preloader-progress-track"><div class="preloader-progress-bar"></div></div>
+            <div class="preloader-percent">0%</div>
+        </div>
+    </div>
+
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg glass-nav py-3">
+        <div class="container">
+            <div class="nav-logo d-flex align-items-center" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <img alt="Gulf Industrial Group Logo" class="nav-logo-img"
+                    src="assets/images/logo.webp" />
+            </div>
+            
+            <!-- Mobile Header Actions -->
+            <div class="d-flex align-items-center gap-2 gap-sm-3 ms-auto me-2 me-sm-3 d-lg-none mobile-header-actions">
+                <button class="nav-icon-btn bg-transparent border-0 text-white p-1" data-search-trigger aria-label="Open search">
+                    <span class="material-symbols-outlined fs-3">search</span>
+                </button>
+            </div>
+            
+            <button class="navbar-toggler border-0 text-white mobile-menu-toggle shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="material-symbols-outlined fs-2">menu</span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+                <!-- Mobile Drawer Header -->
+                <div class="drawer-header d-flex justify-content-between align-items-center d-lg-none mb-4 w-100">
+                    <img alt="Gulf Industrial Group Logo" class="drawer-logo-img" src="assets/images/logo.webp" style="height: 32px;" />
+                    <button class="btn border-0 p-1 drawer-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Close menu">
+                        <span class="material-symbols-outlined fs-2">close</span>
+                    </button>
+                </div>
+                
+                <div class="navbar-nav mx-auto nav-links">
+                    <a class="nav-link nav-item" href="index.html">Home</a>
+                    <a class="nav-link nav-item" href="about.html">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-caret d-flex align-items-center dropdown-trigger active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                            <span class="material-symbols-outlined dropdown-arrow ms-1">expand_more</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-content shadow border-0">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-detail.html">Energy Systems</a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link nav-item" href="contact.html">Contact Us</a>
+                </div>
+                
+                <!-- Mobile Drawer Request a Quote -->
+                <div class="d-lg-none w-100 mt-4 px-2 mobile-drawer-quote">
+                    <a href="request-a-quote.html" class="btn btn-primary w-100 py-2 text-center d-flex justify-content-center align-items-center gap-2 quote-btn-drawer">
+                        Request a Quote <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Header Actions -->
+                <div class="d-none d-lg-flex align-items-center gap-3 nav-actions">
+                    <button class="nav-icon-btn bg-transparent border-0 text-white" data-search-trigger aria-label="Open search"><span class="material-symbols-outlined">search</span></button>
+                    <a href="request-a-quote.html" class="btn btn-primary">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <img alt="Global Solutions Background" class="page-hero-img" src="assets/images/services/hero_excellence.webp"/>
+        <div class="page-hero-content">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-active">Services</span>
+            </nav>
+            <h1 class="font-display-lg text-white mb-sm leading-tight">Global Industrial<br/>Solutions</h1>
+            <p class="font-body-lg text-white max-w-xl mx-auto mb-lg">Our strategies for growth are based on cost leadership, product innovation, market expansion and long-term customer relationships across all our business segments.</p>
+            <a href="#services-list" class="btn btn-primary btn-large">
+                View Solutions <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Core Business Divisions -->
+    <section id="services-list" class="py-5 bg-surface-low" data-aos="fade-up">
+        <div class="container">
+            <div class="header-center-mb text-center mb-5">
+                <h2 class="font-headline-xl mb-2 text-color-primary">Core Business Divisions</h2>
+                <p class="font-body-md section-header-desc mx-auto" style="max-width: 600px;">
+                    Specialty Chemicals, Packaging and Food Flavors — business segments which give us a strong platform for continuing growth through diversification and synergy.
+                </p>
+            </div>
+            <div class="row g-4">
+                <!-- Manufacturing -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/manufacturing.webp" alt="Manufacturing" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">factory</span>
+                                </div>
+                                <h3 class="division-card-title">Manufacturing</h3>
+                                <p class="division-card-desc">Specialty Chemicals — delivering value-added products through innovation, R&D and cost leadership.</p>
+                            </div>
+                            <a href="contact.html" class="division-card-btn text-decoration-none">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Specialty Materials -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/materials.webp" alt="Specialty Materials" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">science</span>
+                                </div>
+                                <h3 class="division-card-title">Specialty Materials</h3>
+                                <p class="division-card-desc">Packaging solutions engineered for performance, protection and sustainability across global markets.</p>
+                            </div>
+                            <a href="contact.html" class="division-card-btn text-decoration-none">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Industrial Solutions -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/solutions.webp" alt="Industrial Solutions" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">settings_input_component</span>
+                                </div>
+                                <h3 class="division-card-title">Industrial Solutions</h3>
+                                <p class="division-card-desc">Food Flavors — anticipating customers' needs and delivering practical applications every day.</p>
+                            </div>
+                            <a href="contact.html" class="division-card-btn text-decoration-none">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Global Logistics -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/logistics.webp" alt="Global Logistics" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">public</span>
+                                </div>
+                                <h3 class="division-card-title">Global Logistics</h3>
+                                <p class="division-card-desc">Global supply chain management — expanding market leadership to new territories through open borders.</p>
+                            </div>
+                            <a href="contact.html" class="division-card-btn text-decoration-none">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Energy Systems -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/energy.webp" alt="Energy Systems" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">bolt</span>
+                                </div>
+                                <h3 class="division-card-title">Energy Systems</h3>
+                                <p class="division-card-desc">Technology Centre investment — maintaining market leadership at the leading edge of technology.</p>
+                            </div>
+                            <a href="service-detail.html" class="division-card-btn text-decoration-none">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Infrastructure -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="division-card">
+                        <img class="division-card-img" src="assets/images/infrastructure.webp" alt="Infrastructure" loading="lazy" />
+                        <div class="division-card-overlay"></div>
+                        <div class="division-card-content">
+                            <div class="division-card-top">
+                                <div class="division-icon-box">
+                                    <span class="material-symbols-outlined">domain</span>
+                                </div>
+                                <h3 class="division-card-title">Infrastructure</h3>
+                                <p class="division-card-desc">Green field start-ups in newly developed territories — achieving quantum growth through strategic acquisitions.</p>
+                            </div>
+                            <a href="contact.html" class="division-card-btn text-decoration-none">
+                                Explore Division <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Mastery Section -->
+    <section class="bg-primary py-5 text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-color-on-primary-container font-label-md tracking-widest uppercase mb-2 d-block">Core Capabilities</span>
+                <h2 class="font-headline-lg text-white mb-0">Technical Mastery</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Precision -->
+                <div class="col-12 col-md-4">
+                    <div class="d-flex flex-column align-items-center text-center p-4 glass-effect rounded-2xl h-100">
+                        <div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim flex align-items-center justify-content-center mb-3 text-color-primary">
+                            <span class="material-symbols-outlined fs-2">precision_manufacturing</span>
+                        </div>
+                        <h4 class="font-headline-md text-white mb-2">Precision</h4>
+                        <p class="text-color-on-primary-container font-body-md mb-0">Attaining cost leadership through value-added integration and optimum resource utilization across all business segments.</p>
+                    </div>
+                </div>
+                <!-- Scalability -->
+                <div class="col-12 col-md-4 pt-md-4">
+                    <div class="d-flex flex-column align-items-center text-center p-4 glass-effect rounded-2xl h-100">
+                        <div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim flex align-items-center justify-content-center mb-3 text-color-primary">
+                            <span class="material-symbols-outlined fs-2">dynamic_form</span>
+                        </div>
+                        <h4 class="font-headline-md text-white mb-2">Scalability</h4>
+                        <p class="text-color-on-primary-container font-body-md mb-0">Expanding market leadership to new territories, benefiting from open borders to trade and initiating green field start-ups.</p>
+                    </div>
+                </div>
+                <!-- Sustainability -->
+                <div class="col-12 col-md-4">
+                    <div class="d-flex flex-column align-items-center text-center p-4 glass-effect rounded-2xl h-100">
+                        <div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim flex align-items-center justify-content-center mb-3 text-color-primary">
+                            <span class="material-symbols-outlined fs-2">eco</span>
+                        </div>
+                        <h4 class="font-headline-md text-white mb-2">Sustainability</h4>
+                        <p class="text-color-on-primary-container font-body-md mb-0">Focusing on the fundamentals with sustainability in mind — balancing short-term and long-term through careful strategic planning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="py-5 bg-surface-low">
+        <div class="container">
+            <div class="row g-0 bg-white rounded-3xl overflow-hidden shadow-sm">
+                <div class="col-12 col-lg-6 position-relative" style="min-height: 380px;">
+                    <img alt="Refinery plant at sunset" class="w-100 h-100 object-fit-cover position-absolute start-0 top-0" loading="lazy" src="assets/images/services/refinery_sunset.webp"/>
+                    <div class="absolute bottom-8 left-8 glass-effect p-4 rounded-xl text-white" style="bottom: 2rem; left: 2rem; z-index: 10;">
+                        <div class="fs-1 font-bold font-headline-lg text-white">99.8%</div>
+                        <div class="text-sm font-label-md text-white">Efficiency Realized</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 p-5 d-flex flex-column justify-content-center">
+                    <span class="text-color-primary font-label-md uppercase tracking-widest mb-2 d-block">Recent Global Project</span>
+                    <h2 class="font-headline-lg text-color-primary mb-3">The KSA Hydrogen Grid Integration</h2>
+                    <p class="font-body-lg text-color-on-surface-variant mb-4">
+                        We partnered with leading energy providers to architect a cross-border hydrogen logistics network. Leveraging our AI-driven Smart Logistics and Advanced Materials, we reduced energy loss by 14% across the entire infrastructure.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <h6 class="font-label-md text-color-primary uppercase mb-1">Client</h6>
+                            <p class="font-body-md font-bold mb-0">Neom Energy Consortium</p>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="font-label-md text-color-primary uppercase mb-1">Location</h6>
+                            <p class="font-body-md font-bold mb-0">Tabuk Province, KSA</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-large w-fit">Read Case Study</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-banner text-center py-5 px-4 position-relative overflow-hidden">
+                <div class="cta-circle-overlay"></div>
+                <div class="cta-inner-wrapper position-relative z-3">
+                    <h2 class="font-headline-xl mb-3">Partner with the Global Leader in Industrial Excellence</h2>
+                    <p class="font-body-lg mb-4 text-color-on-primary-container mx-auto" style="max-width: 800px;">
+                        We cement long-term relationships by building on our strength of providing systems solutions to our customers and investing in customer service and process improvement.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-outline-white btn-large btn-cta-white">Contact Our HQ</a>
+                        <a href="contact.html" class="btn btn-outline-white btn-large">Request Capability Statement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-5 footer-top">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img alt="Logo" class="footer-logo-img" loading="lazy" src="assets/images/logo.webp"/>
+                        
+                    </div>
+                    <p class="font-body-md footer-subtitle text-color-on-surface-variant">
+                        To be true to our core as custodians of wealth and careers and to be valued always as best in class.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Quick Links</h4>
+                    <ul class="footer-list list-unstyled ps-0">
+                        <li class="mb-2"><a class="footer-link font-body-md" href="index.html">Home</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="about.html">About Us</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Services</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Services</h4>
+                    <ul class="footer-list list-unstyled ps-0">
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">All Services</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="service-detail.html">Specialty Chemicals</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Packaging</a></li>
+                        <li class="mb-2"><a class="footer-link font-body-md" href="services.html">Food Flavors</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-body-md footer-title mb-3">Our Newsletter</h4>
+                    <p class="font-body-md footer-newsletter-text text-color-on-surface-variant mb-3">
+                        To add value in everything we do everyday — stay connected with GIG insights and updates.
+                    </p>
+                    <div class="footer-newsletter-box d-flex gap-2">
+                        <input class="form-control" placeholder="Email Address" type="email"/>
+                        <button class="btn btn-primary footer-newsletter-btn px-3">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-3 footer-bottom border-top">
+            <p class="font-body-md footer-bottom-text mb-0 text-color-on-surface-variant">© 2026 Gulf Industrial Group. Engineering Excellence Globally.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and AOS Script Dependencies -->
+    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/aos.js"></script>
+    
+    <!-- Custom Script -->
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/ui-components.js"></script>
+
+    <!-- ── Search Modal ──────────────────────────────────────── -->
+    <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-backdrop"></div>
+        <div class="search-modal-box">
+            <div class="search-input-row">
+                <span class="material-symbols-outlined search-icon-lg">search</span>
+                <input id="search-modal-input" type="text" placeholder="Search pages, services…" autocomplete="off" spellcheck="false" />
+                <button class="search-clear-btn" aria-label="Clear search"><span class="material-symbols-outlined" style="font-size:18px">close</span></button>
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-quick-section">
+                <div class="search-quick-label">Quick Links</div>
+                <div class="search-quick-links">
+                    <a class="search-chip" href="about.html"><span class="material-symbols-outlined">corporate_fare</span>About Us</a>
+                    <a class="search-chip" href="services.html"><span class="material-symbols-outlined">build</span>Services</a>
+                    <a class="search-chip" href="service-detail.html"><span class="material-symbols-outlined">bolt</span>Energy Systems</a>
+                    <a class="search-chip" href="contact.html"><span class="material-symbols-outlined">mail</span>Contact</a>
+                    <a class="search-chip" href="index.html#divisions"><span class="material-symbols-outlined">category</span>Divisions</a>
+                </div>
+            </div>
+            <div class="search-results" role="listbox"></div>
+            <div class="search-esc-hint">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
+
+    <!-- ── Back to Top ───────────────────────────────────────── -->
+    <button id="back-to-top" aria-label="Back to top">
+        <svg class="btt-svg" viewBox="0 0 52 52" fill="none"><circle class="btt-ring-track" cx="26" cy="26" r="22"/><circle class="btt-ring-progress" cx="26" cy="26" r="22"/></svg>
+        <div class="btt-btn-face"><span class="material-symbols-outlined btt-arrow">arrow_upward</span><span class="btt-text">TO TOP</span></div>
+    </button>
+</body>
+</html>
+
+
