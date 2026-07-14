@@ -1778,6 +1778,12 @@ a {
   padding: var(--stack-md);
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 53, 95, 0.15);
 }
 
 .bento-card-bg-primary {
@@ -1819,6 +1825,12 @@ a {
   font-size: 80px;
   color: rgba(0, 53, 95, 0.1);
   margin-left: 24px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.bento-card:hover .bento-icon-construction {
+  transform: scale(1.1) rotate(-8deg);
+  color: rgba(0, 53, 95, 0.25);
 }
 
 /* --- Call to Action Banner --- */
