@@ -40,19 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "Dubai Office",
                 poBox: "P.O.Box 506820",
                 address: "7th Floor, Dubai International Financial Centre (DIFC) – Gate Village 7<br>Dubai, UAE",
-                phone: "+971 4 304 0000",
+                phones: ["+971 4 304 0000"],
                 fax: "+971 4 304 0004"
             },
             {
                 name: "Jeddah Office",
                 country: "Kingdom of Saudi Arabia",
-                coords: [21.4225, 39.2612],
+                coords: [21.4299, 39.2148],
                 icon: ksaIcon,
                 title: "Jeddah Office",
                 poBox: "P.O. Box 8281",
                 address: "Jeddah 21482, Industrial City – Phase 1<br>Kingdom of Saudi Arabia",
-                phone: null,
-                fax: null
+                phones: ["+966 12 608 2709", "+966 12 608 2712"],
+                fax: "+966 12 637 7985"
             }
         ];
 
@@ -63,12 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const marker = L.marker(loc.coords, { icon: loc.icon }).addTo(map);
             markersGroup.addLayer(marker);
 
-            const phoneFaxHtml = loc.phone ? `
+            const phoneLines = loc.phones.map(p => `<div>T: <a href="tel:${p.replace(/\s+/g, '')}" style="color: #00355f; text-decoration: none;">${p}</a></div>`).join('');
+            const faxLine = loc.fax ? `<div>F: ${loc.fax}</div>` : '';
+            const phoneFaxHtml = `
                 <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid rgba(0,0,0,0.06); font-family: 'Inter', sans-serif; font-size: 12px; color: #00355f; font-weight: 600; line-height: 1.5;">
-                    <div>T: <a href="tel:${loc.phone.replace(/\s+/g, '')}" style="color: #00355f; text-decoration: none;">${loc.phone}</a></div>
-                    <div>F: ${loc.fax}</div>
+                    ${phoneLines}
+                    ${faxLine}
                 </div>
-            ` : '';
+            `;
 
             const popupContent = `
                 <div class="gig-popup">
