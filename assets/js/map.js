@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mapContainer = document.getElementById('gig-leaflet-map');
     if (mapContainer && typeof L !== 'undefined') {
-        const mapCenter = [25.00, 55.00];
         const map = L.map('gig-leaflet-map', {
-            center: mapCenter,
-            zoom: 8.5,
+            center: [23.8, 47.2],
+            zoom: 5.5,
             zoomControl: true,
             scrollWheelZoom: false
         });
@@ -17,65 +16,89 @@ document.addEventListener('DOMContentLoaded', () => {
         }).addTo(map);
 
         // Custom marker icons
-        const hqIcon = L.divIcon({
+        const uaeIcon = L.divIcon({
             className: 'gig-marker-hq',
-            iconSize: [14, 14],
-            iconAnchor: [7, 7],
-            popupAnchor: [0, -7]
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+            popupAnchor: [0, -8]
         });
 
-        const hubIcon = L.divIcon({
+        const ksaIcon = L.divIcon({
             className: 'gig-marker-hub',
-            iconSize: [14, 14],
-            iconAnchor: [7, 7],
-            popupAnchor: [0, -7]
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+            popupAnchor: [0, -8]
         });
 
-        // Dubai, Abu Dhabi, Sharjah locations
+        // Dubai (UAE) & Jeddah (KSA) office locations
         const locations = [
             {
-                name: "Dubai",
-                coords: [25.2048, 55.2708],
-                type: "hq",
-                title: "Middle East HQ (Dubai)",
-                desc: "GIG Tower, Sheikh Zayed Road, DIFC. Regional control, administrative & strategy offices."
+                name: "Dubai Office",
+                country: "United Arab Emirates",
+                coords: [25.2104, 55.2818],
+                icon: uaeIcon,
+                title: "Dubai Office",
+                poBox: "P.O.Box 506820",
+                address: "7th Floor, Dubai International Financial Centre (DIFC) – Gate Village 7<br>Dubai, UAE",
+                phone: "+971 4 304 0000",
+                fax: "+971 4 304 0004"
             },
             {
-                name: "Abu Dhabi",
-                coords: [24.4539, 54.3773],
-                type: "hub",
-                title: "Manufacturing Hub (Abu Dhabi)",
-                desc: "Mussafah Industrial Area. Heavy metal manufacturing & high-capacity aerospace parts forging."
-            },
-            {
-                name: "Sharjah",
-                coords: [25.3463, 55.4209],
-                type: "hub",
-                title: "Logistics Hub (Sharjah)",
-                desc: "Al Sajaa Industrial Center. Next-generation packaging, supply routing, & logistics gateway."
+                name: "Jeddah Office",
+                country: "Kingdom of Saudi Arabia",
+                coords: [21.4225, 39.2612],
+                icon: ksaIcon,
+                title: "Jeddah Office",
+                poBox: "P.O. Box 8281",
+                address: "Jeddah 21482, Industrial City – Phase 1<br>Kingdom of Saudi Arabia",
+                phone: null,
+                fax: null
             }
         ];
 
-        // Add markers and interactive tooltips/popups
+        const markersGroup = L.featureGroup();
+
+        // Add markers and interactive popups
         locations.forEach(loc => {
-            const icon = loc.type === 'hq' ? hqIcon : hubIcon;
-            const marker = L.marker(loc.coords, { icon: icon }).addTo(map);
-            
+            const marker = L.marker(loc.coords, { icon: loc.icon }).addTo(map);
+            markersGroup.addLayer(marker);
+
+            const phoneFaxHtml = loc.phone ? `
+                <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid rgba(0,0,0,0.06); font-family: 'Inter', sans-serif; font-size: 12px; color: #00355f; font-weight: 600; line-height: 1.5;">
+                    <div>T: <a href="tel:${loc.phone.replace(/\s+/g, '')}" style="color: #00355f; text-decoration: none;">${loc.phone}</a></div>
+                    <div>F: ${loc.fax}</div>
+                </div>
+            ` : '';
+
             const popupContent = `
                 <div class="gig-popup">
-                    <h4 style="font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 700; color: #00355f; margin: 0 0 6px 0;">${loc.title}</h4>
-                    <p style="font-family: 'Inter', sans-serif; font-size: 12px; line-height: 1.5; color: #42474f; margin: 0;">${loc.desc}</p>
+                    <div style="font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 700; color: #727780; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px;">${loc.country}</div>
+                    <h4 style="font-family: 'Manrope', sans-serif; font-size: 15px; font-weight: 700; color: #00355f; margin: 0 0 4px 0;">${loc.title}</h4>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 12px; line-height: 1.45; color: #42474f; margin: 0;">
+                        <span style="font-weight: 500; color: #191c1e;">${loc.poBox}</span><br>
+                        ${loc.address}
+                    </p>
+                    ${phoneFaxHtml}
                 </div>
             `;
+
             marker.bindPopup(popupContent, {
                 closeButton: false,
                 offset: L.point(0, -2)
             });
 
-            // Hover interactions
+            // Hover / click interactions
             marker.on('mouseover', function () {
                 this.openPopup();
             });
         });
+
+        // Fit map bounds to show both offices perfectly with padding
+        if (locations.length > 0) {
+            map.fitBounds(markersGroup.getBounds(), {
+                padding: [60, 60],
+                maxZoom: 6
+            });
+        }
     }
 });
