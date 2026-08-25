@@ -543,103 +543,83 @@ a {
   left: 0;
   width: 100%;
   z-index: 50;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 53, 95, 0.1);
+  box-shadow: 0 4px 20px -5px rgba(0, 53, 95, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-nav {
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  box-shadow: none;
-}
-
-/* Transparent navbar overrides */
-.navbar:not(.scrolled) .nav-logo-text {
-  color: #ffffff;
-}
-
-.navbar:not(.scrolled) .nav-link {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.navbar:not(.scrolled) .nav-link:hover {
-  color: #ffffff;
-}
-
-.navbar:not(.scrolled) .nav-link.active {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-
-.navbar:not(.scrolled) .nav-icon-btn {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.navbar:not(.scrolled) .nav-icon-btn:hover {
-  color: #ffffff;
-}
-
-.navbar:not(.scrolled) .btn-primary {
-  background-color: #ffffff !important;
-  color: var(--color-primary) !important;
-  border-color: #ffffff !important;
-}
-
-.navbar:not(.scrolled) .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2) !important;
-}
-
-.navbar.scrolled {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 4px 20px -5px rgba(0, 53, 95, 0.1);
-  border-bottom-color: var(--color-outline-variant);
+  background: #ffffff;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px -5px rgba(0, 53, 95, 0.08);
+  border-bottom: 1px solid rgba(0, 53, 95, 0.1);
 }
 
-/* Scrolled state: restore dark text colors */
-.navbar.scrolled .nav-logo-text {
+/* Nav Logo text */
+.navbar .nav-logo-text {
   color: var(--color-primary);
 }
 
-.navbar.scrolled .nav-link {
-  color: var(--color-on-surface-variant);
+/* Nav links - dark & highly visible */
+.navbar .nav-link {
+  color: var(--color-on-surface-variant) !important;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
-.navbar.scrolled .nav-link:hover {
-  color: var(--color-primary);
+.navbar .nav-link:hover {
+  color: var(--color-primary) !important;
 }
 
-.navbar.scrolled .nav-link.active {
-  color: var(--color-primary);
+.navbar .nav-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 700;
   border-bottom-color: var(--color-primary);
 }
 
-.navbar.scrolled .mobile-menu-toggle {
+/* Mobile toggler & Nav icons */
+.navbar .mobile-menu-toggle {
   color: var(--color-primary) !important;
 }
 
-.navbar.scrolled .btn-primary {
-  background-color: var(--color-primary) !important;
-  color: #ffffff !important;
-  border-color: var(--color-primary) !important;
-}
-
-.navbar.scrolled .nav-icon-btn {
+.navbar .nav-icon-btn,
+.navbar .mobile-header-actions .nav-icon-btn {
   color: var(--color-on-surface-variant) !important;
 }
 
-.navbar.scrolled .nav-icon-btn:hover {
+.navbar .nav-icon-btn:hover,
+.navbar .mobile-header-actions .nav-icon-btn:hover {
   color: var(--color-primary) !important;
 }
 
-/* Transparent state: mobile toggler white */
-.navbar:not(.scrolled) .mobile-menu-toggle {
+/* Navbar Primary Button (Request a Quote) */
+.navbar .btn-primary {
+  background-color: var(--color-primary) !important;
   color: #ffffff !important;
+  border-color: var(--color-primary) !important;
+  font-weight: 600;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #00223f !important;
+  border-color: #00223f !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 53, 95, 0.25) !important;
+}
+
+/* Compact padding when scrolled */
+.navbar.scrolled {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  background: #ffffff;
+  box-shadow: 0 4px 20px -5px rgba(0, 53, 95, 0.12);
+  border-bottom-color: var(--color-outline-variant);
 }
 
 .navbar-container {
@@ -1042,16 +1022,13 @@ a {
 }
 
 /* Mobile Header Action buttons styling (Search icon in header bar) */
-/* Transparent navbar (home hero): white icon */
-.navbar:not(.scrolled) .mobile-header-actions .nav-icon-btn {
-  color: #ffffff;
+.navbar .mobile-header-actions .nav-icon-btn {
+  color: var(--color-on-surface-variant) !important;
   transition: color 0.3s ease;
 }
 
-/* White/scrolled navbar (sub-pages or after scroll): dark icon */
-.navbar.scrolled .mobile-header-actions .nav-icon-btn {
+.navbar .mobile-header-actions .nav-icon-btn:hover {
   color: var(--color-primary) !important;
-  transition: color 0.3s ease;
 }
 
 
